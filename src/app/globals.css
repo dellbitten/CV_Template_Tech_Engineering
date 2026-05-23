@@ -26,53 +26,7 @@
   --color-emerald-500: #10b981;
 }
 
-:root {
-  --cv-bg: #ffffff;
-  --cv-fg: #0a0c10;
-  --cv-muted: #515c6e;
-  --cv-border: #d5d9e0;
-  --cv-accent: #0066cc;
-  --cv-accent-soft: #e8f4ff;
-  --cv-surface: #eef1f6;
-  --cv-tag-bg: #eceef1;
-  --cv-tag-fg: #1a1d24;
-
-  --cv-display-scale: 2;
-  --cv-a4-width: 210mm;
-
-  --panel-bg: rgba(255, 255, 255, 0.72);
-  --header-bg: rgba(255, 255, 255, 0.8);
-  --tech-grid-opacity: 0.45;
-  --tech-glow-blue: rgba(10, 132, 255, 0.12);
-  --tech-glow-emerald: rgba(16, 185, 129, 0.08);
-  --tech-glow-violet: rgba(99, 102, 241, 0.1);
-
-  /* Màu in (luôn nền sáng) */
-  --cv-print-bg: #ffffff;
-  --cv-print-fg: #0a0c10;
-  --cv-print-muted: #434c5c;
-  --cv-print-border: #c5cad3;
-  --cv-print-accent: #0066cc;
-}
-
-.dark {
-  --cv-bg: #0c0e12;
-  --cv-fg: #f0f2f5;
-  --cv-muted: #9aa3b2;
-  --cv-border: #2a3140;
-  --cv-accent: #5eb3ff;
-  --cv-accent-soft: rgba(10, 132, 255, 0.12);
-  --cv-surface: #06080b;
-  --cv-tag-bg: #161a22;
-  --cv-tag-fg: #e8eaed;
-
-  --panel-bg: rgba(12, 14, 18, 0.75);
-  --header-bg: rgba(6, 8, 11, 0.85);
-  --tech-grid-opacity: 0.35;
-  --tech-glow-blue: rgba(59, 158, 255, 0.18);
-  --tech-glow-emerald: rgba(52, 211, 153, 0.1);
-  --tech-glow-violet: rgba(139, 92, 246, 0.12);
-}
+/* Màu CV: src/color/theme.ts — inject trong layout.tsx */
 
 html {
   scroll-behavior: smooth;

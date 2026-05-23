@@ -1,6 +1,9 @@
 import type { LayoutType } from "@/lib/schema/resume";
 
-/** Cấu hình mặc định của ứng dụng — chỉnh tại đây hoặc xem config.md */
+/**
+ * Cấu hình ứng dụng (layout, theme, QR, export) — chỉnh tại đây.
+ * Nội dung CV: src/data/resume.ts · Hướng dẫn: src/data/HUONG_DAN_NHAP_LIEU.md
+ */
 export const appConfig = {
   /** Tiêu đề tab trình duyệt (có thể ghi đè trong layout.tsx) */
   title: "Tech CV — Engineering Resume",

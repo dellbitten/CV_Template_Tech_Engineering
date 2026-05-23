@@ -12,6 +12,7 @@ import {
 } from "lucide-react";
 import { QRCodeSVG } from "qrcode.react";
 import Image from "next/image";
+import { avatarConfig, resolveAvatarSrc } from "@/avatar/config";
 import type { Resume } from "@/lib/schema/resume";
 import { cn } from "@/lib/utils";
 
@@ -56,7 +57,9 @@ export function CVHeader({
   personal: Resume["personal"];
   variant?: "default" | "sidebar" | "compact" | "ats";
 }) {
-  const { fullName, title, avatar, contact, qrEnabled } = personal;
+  const { fullName, title, avatar: resumeAvatar, contact, qrEnabled } = personal;
+  const avatar = resolveAvatarSrc(resumeAvatar);
+  const avatarAlt = avatarConfig.alt || fullName;
   const qrValue = contact.email
     ? `mailto:${contact.email}`
     : contact.portfolio || contact.github || "";
@@ -104,7 +107,13 @@ export function CVHeader({
       <header className="print-break-avoid">
         {avatar ? (
           <div className="relative w-20 h-20 rounded-lg overflow-hidden border border-cv mb-4 mx-auto">
-            <Image src={avatar} alt={fullName} fill className="object-cover" />
+            <Image
+              src={avatar}
+              alt={avatarAlt}
+              fill
+              className="object-cover"
+              style={{ objectFit: avatarConfig.objectFit }}
+            />
           </div>
         ) : (
           <div className="w-20 h-20 rounded-lg bg-gradient-to-br from-electric-500/20 to-emerald-500/10 border border-electric-500/30 flex items-center justify-center text-2xl font-semibold text-cv-accent mb-4 mx-auto shadow-[0_0_24px_-8px_rgba(10,132,255,0.4)]">
@@ -169,7 +178,13 @@ export function CVHeader({
         <div className="flex gap-4 items-start">
           {avatar && variant !== "ats" && (
             <div className="relative w-16 h-16 rounded-lg overflow-hidden border border-cv shrink-0 hidden sm:block">
-              <Image src={avatar} alt={fullName} fill className="object-cover" />
+              <Image
+              src={avatar}
+              alt={avatarAlt}
+              fill
+              className="object-cover"
+              style={{ objectFit: avatarConfig.objectFit }}
+            />
             </div>
           )}
           <div>

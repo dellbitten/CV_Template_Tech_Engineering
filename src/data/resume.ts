@@ -3,8 +3,11 @@ import { DEFAULT_SECTION_ORDER } from "@/lib/schema/resume";
 import { appConfig } from "./config";
 
 /**
- * Dữ liệu CV mặc định — chỉnh nội dung tại file này.
- * Hướng dẫn chi tiết: src/data/resume.md
+ * Dữ liệu CV mặc định — Tech Engineering
+ *
+ * Hướng dẫn: src/data/HUONG_DAN_NHAP_LIEU.md · resume.md
+ * Layout/theme: src/data/config.ts
+ * Màu: src/color/theme.ts · Font: src/font/config.ts · Ảnh: src/avatar/config.ts
  */
 export const defaultResume: Resume = {
   version: "1.0",
