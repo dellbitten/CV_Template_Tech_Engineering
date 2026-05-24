@@ -4,6 +4,7 @@ import { ThemeProvider } from "@/components/theme/theme-provider";
 import { getThemeCssBlock } from "@/color/theme";
 import { getFontCssBlock } from "@/font/config";
 import { appConfig } from "@/data/config";
+import { DEFAULT_AVATAR_SRC } from "@/avatar/config";
 import { defaultResume } from "@/data/resume";
 import { buildPersonJsonLd } from "@/lib/seo";
 import "./globals.css";
@@ -36,6 +37,11 @@ export const metadata: Metadata = {
     description: appConfig.description,
   },
   robots: { index: true, follow: true },
+  icons: {
+    icon: DEFAULT_AVATAR_SRC,
+    shortcut: DEFAULT_AVATAR_SRC,
+    apple: DEFAULT_AVATAR_SRC,
+  },
 };
 
 const personJsonLd = buildPersonJsonLd({
