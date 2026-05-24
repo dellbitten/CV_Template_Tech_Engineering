@@ -25,10 +25,19 @@ export const sectionLabels = {
   },
 } as const;
 
+export const uiStrings = {
+  vi: { present: "Hiện tại", stack: "Stack" },
+  en: { present: "Present", stack: "Stack" },
+} as const;
+
 export function getSectionLabel(
   locale: Resume["meta"]["locale"],
   key: keyof typeof sectionLabels.en,
 ) {
   const l: CVLocale = locale === "vi" ? "vi" : "en";
   return sectionLabels[l][key];
+}
+
+export function getUiString(locale: CVLocale, key: keyof typeof uiStrings.en) {
+  return uiStrings[locale][key];
 }

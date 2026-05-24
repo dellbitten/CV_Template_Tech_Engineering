@@ -16,18 +16,21 @@ export interface AvatarConfig {
   hideInPrint: boolean;
 }
 
+/** Ảnh mẫu — `public/avatar/placeholder.svg` */
+export const DEFAULT_AVATAR_SRC = "/avatar/placeholder.svg";
+
 export const avatarConfig: AvatarConfig = {
   enabled: true,
-  src: "",
-  alt: "",
+  src: DEFAULT_AVATAR_SRC,
+  alt: "Ảnh đại diện — thay bằng ảnh của bạn",
   objectFit: "cover",
   hideInPrint: false,
 };
 
-/** URL ảnh hiển thị — config.ts ưu tiên, sau đó fallback từ resume */
+/** URL ảnh hiển thị — config.ts → resume.ts → placeholder mẫu */
 export function resolveAvatarSrc(resumeAvatar?: string): string {
-  if (avatarConfig.enabled && avatarConfig.src) {
-    return avatarConfig.src;
-  }
-  return resumeAvatar?.trim() ?? "";
+  if (!avatarConfig.enabled) return "";
+  if (avatarConfig.src.trim()) return avatarConfig.src;
+  if (resumeAvatar?.trim()) return resumeAvatar.trim();
+  return DEFAULT_AVATAR_SRC;
 }

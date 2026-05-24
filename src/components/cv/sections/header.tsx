@@ -27,6 +27,67 @@ const iconMap = {
   stackoverflow: Layers,
 } as const;
 
+function getInitials(name: string) {
+  return name
+    .split(/\s+/)
+    .filter(Boolean)
+    .map((n) => n[0])
+    .join("")
+    .slice(0, 2)
+    .toUpperCase();
+}
+
+function AvatarImage({
+  src,
+  alt,
+  className,
+  size = "md",
+}: {
+  src: string;
+  alt: string;
+  className?: string;
+  size?: "sm" | "md" | "lg";
+}) {
+  const sizeClass =
+    size === "lg" ? "w-20 h-20" : size === "sm" ? "w-14 h-14" : "w-16 h-16";
+
+  return (
+    <div
+      className={cn(
+        "relative shrink-0 overflow-hidden rounded-lg border border-cv",
+        sizeClass,
+        className,
+      )}
+    >
+      <Image
+        src={src}
+        alt={alt}
+        fill
+        className="object-cover"
+        style={{ objectFit: avatarConfig.objectFit }}
+        unoptimized={src.endsWith(".svg")}
+      />
+    </div>
+  );
+}
+
+function AvatarInitials({ name, className, size = "md" }: { name: string; className?: string; size?: "sm" | "md" | "lg" }) {
+  const sizeClass =
+    size === "lg" ? "w-20 h-20 text-2xl" : size === "sm" ? "w-14 h-14 text-lg" : "w-16 h-16 text-xl";
+
+  return (
+    <div
+      className={cn(
+        "shrink-0 rounded-lg bg-gradient-to-br from-electric-500/20 to-emerald-500/10 border border-electric-500/30 flex items-center justify-center font-semibold text-cv-accent shadow-[0_0_24px_-8px_rgba(10,132,255,0.4)]",
+        sizeClass,
+        className,
+      )}
+    >
+      {getInitials(name)}
+    </div>
+  );
+}
+
 function ContactLink({
   href,
   label,
@@ -113,16 +174,11 @@ export function CVHeader({
               fill
               className="object-cover"
               style={{ objectFit: avatarConfig.objectFit }}
+              unoptimized={avatar.endsWith(".svg")}
             />
           </div>
         ) : (
-          <div className="w-20 h-20 rounded-lg bg-gradient-to-br from-electric-500/20 to-emerald-500/10 border border-electric-500/30 flex items-center justify-center text-2xl font-semibold text-cv-accent mb-4 mx-auto shadow-[0_0_24px_-8px_rgba(10,132,255,0.4)]">
-            {fullName
-              .split(" ")
-              .map((n) => n[0])
-              .join("")
-              .slice(0, 2)}
-          </div>
+          <AvatarInitials name={fullName} size="lg" className="mb-4 mx-auto" />
         )}
         <h1 className="text-lg font-bold text-center leading-tight">{fullName}</h1>
         <p className="text-xs text-cv-muted text-center mt-1 leading-snug">{title}</p>
@@ -176,17 +232,12 @@ export function CVHeader({
     >
       <div className="flex flex-col sm:flex-row sm:items-start sm:justify-between gap-4">
         <div className="flex gap-4 items-start">
-          {avatar && variant !== "ats" && (
-            <div className="relative w-16 h-16 rounded-lg overflow-hidden border border-cv shrink-0 hidden sm:block">
-              <Image
-              src={avatar}
-              alt={avatarAlt}
-              fill
-              className="object-cover"
-              style={{ objectFit: avatarConfig.objectFit }}
-            />
-            </div>
-          )}
+          {avatarConfig.enabled && variant !== "ats" &&
+            (avatar ? (
+              <AvatarImage src={avatar} alt={avatarAlt} size="md" />
+            ) : (
+              <AvatarInitials name={fullName} size="md" />
+            ))}
           <div>
             <h1
               className={cn(

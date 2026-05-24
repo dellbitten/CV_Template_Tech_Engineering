@@ -36,7 +36,16 @@ Chọn layout trong `resume.meta.layout` hoặc `config.defaultLayout`.
 
 ## Ngôn ngữ
 
-`resume.meta.locale`: `"vi"` hoặc `"en"`.
+**Chỉ nhập nội dung tiếng Việt** trong `resume.ts`. Tiêu đề section (Kinh nghiệm, Dự án, …) tự đổi theo ngôn ngữ hiển thị.
+
+| Nút toolbar | Chức năng |
+|-------------|-----------|
+| **EN** | Dịch tự động sang tiếng Anh (Lingva / MyMemory — miễn phí). Lần đầu có thể mất vài giây. |
+| **VI** | Quay lại bản gốc tiếng Việt trong `resume.ts`. |
+
+Giữ nguyên tên công nghệ (Go, Kubernetes, AWS…), URL, email và số điện thoại — hệ thống không dịch các trường này.
+
+Tuỳ chọn: thêm `MYMEMORY_EMAIL` trong `.env.local` để tăng hạn mức dịch MyMemory.
 
 ## Chi tiết từng trường
 

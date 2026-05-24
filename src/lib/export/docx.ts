@@ -6,8 +6,10 @@ import {
   HeadingLevel,
 } from "docx";
 import type { Resume } from "@/lib/schema/resume";
+import { getSectionLabel, getUiString } from "@/i18n/section-labels";
 
 export async function exportResumeToDocx(resume: Resume): Promise<Blob> {
+  const locale = resume.meta.locale === "vi" ? "vi" : "en";
   const children: Paragraph[] = [];
 
   children.push(
@@ -52,13 +54,13 @@ export async function exportResumeToDocx(resume: Resume): Promise<Blob> {
   }
 
   children.push(
-    new Paragraph({ heading: HeadingLevel.HEADING_1, text: "Professional Summary" }),
+    new Paragraph({ heading: HeadingLevel.HEADING_1, text: getSectionLabel(locale, "summary") }),
     new Paragraph({ children: [new TextRun(resume.summary)] }),
     new Paragraph({ text: "" }),
   );
 
   children.push(
-    new Paragraph({ heading: HeadingLevel.HEADING_1, text: "Technical Skills" }),
+    new Paragraph({ heading: HeadingLevel.HEADING_1, text: getSectionLabel(locale, "skills") }),
   );
   for (const cat of resume.skills) {
     children.push(
@@ -73,11 +75,11 @@ export async function exportResumeToDocx(resume: Resume): Promise<Blob> {
   children.push(new Paragraph({ text: "" }));
 
   children.push(
-    new Paragraph({ heading: HeadingLevel.HEADING_1, text: "Work Experience" }),
+    new Paragraph({ heading: HeadingLevel.HEADING_1, text: getSectionLabel(locale, "experience") }),
   );
   for (const exp of resume.experience) {
     const dates = exp.current
-      ? `${exp.startDate} – Present`
+      ? `${exp.startDate} – ${getUiString(locale, "present")}`
       : `${exp.startDate} – ${exp.endDate ?? ""}`;
     children.push(
       new Paragraph({
@@ -90,7 +92,7 @@ export async function exportResumeToDocx(resume: Resume): Promise<Blob> {
     if (exp.stack?.length) {
       children.push(
         new Paragraph({
-          children: [new TextRun({ text: `Stack: ${exp.stack.join(", ")}`, italics: true })],
+          children: [new TextRun({ text: `${getUiString(locale, "stack")}: ${exp.stack.join(", ")}`, italics: true })],
         }),
       );
     }
@@ -107,7 +109,7 @@ export async function exportResumeToDocx(resume: Resume): Promise<Blob> {
   }
   children.push(new Paragraph({ text: "" }));
 
-  children.push(new Paragraph({ heading: HeadingLevel.HEADING_1, text: "Projects" }));
+  children.push(new Paragraph({ heading: HeadingLevel.HEADING_1, text: getSectionLabel(locale, "projects") }));
   for (const proj of resume.projects) {
     children.push(
       new Paragraph({
@@ -132,7 +134,7 @@ export async function exportResumeToDocx(resume: Resume): Promise<Blob> {
 
   if (resume.certifications.length) {
     children.push(
-      new Paragraph({ heading: HeadingLevel.HEADING_1, text: "Certifications" }),
+      new Paragraph({ heading: HeadingLevel.HEADING_1, text: getSectionLabel(locale, "certifications") }),
     );
     for (const c of resume.certifications) {
       children.push(new Paragraph({ text: `${c.name} — ${c.issuer}` }));
@@ -141,7 +143,7 @@ export async function exportResumeToDocx(resume: Resume): Promise<Blob> {
   }
 
   if (resume.education.length) {
-    children.push(new Paragraph({ heading: HeadingLevel.HEADING_1, text: "Education" }));
+    children.push(new Paragraph({ heading: HeadingLevel.HEADING_1, text: getSectionLabel(locale, "education") }));
     for (const edu of resume.education) {
       children.push(
         new Paragraph({
@@ -154,7 +156,7 @@ export async function exportResumeToDocx(resume: Resume): Promise<Blob> {
 
   if (resume.openSource) {
     children.push(
-      new Paragraph({ heading: HeadingLevel.HEADING_1, text: "Open Source" }),
+      new Paragraph({ heading: HeadingLevel.HEADING_1, text: getSectionLabel(locale, "openSource") }),
     );
     if (resume.openSource.githubUsername) {
       children.push(
@@ -168,7 +170,7 @@ export async function exportResumeToDocx(resume: Resume): Promise<Blob> {
   }
 
   if (resume.languages.length) {
-    children.push(new Paragraph({ heading: HeadingLevel.HEADING_1, text: "Languages" }));
+    children.push(new Paragraph({ heading: HeadingLevel.HEADING_1, text: getSectionLabel(locale, "languages") }));
     for (const lang of resume.languages) {
       children.push(new Paragraph({ text: `${lang.name} — ${lang.level}` }));
     }

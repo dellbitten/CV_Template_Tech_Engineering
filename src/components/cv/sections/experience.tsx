@@ -1,11 +1,13 @@
 import { SectionTitle } from "@/components/cv/shared/section-title";
 import type { Experience } from "@/lib/schema/resume";
-import { getSectionLabel, type CVLocale } from "@/i18n/section-labels";
+import { getSectionLabel, getUiString, type CVLocale } from "@/i18n/section-labels";
 import { cn } from "@/lib/utils";
 
-function formatDateRange(exp: Experience) {
+function formatDateRange(exp: Experience, locale: CVLocale) {
   const start = exp.startDate.replace("-", "/");
-  const end = exp.current ? "Present" : exp.endDate?.replace("-", "/") ?? "";
+  const end = exp.current
+    ? getUiString(locale, "present")
+    : exp.endDate?.replace("-", "/") ?? "";
   return `${start} – ${end}`;
 }
 
@@ -47,13 +49,13 @@ export function ExperienceSection({
                 <p className="text-sm text-cv-accent font-medium">{exp.company}</p>
               </div>
               <div className="text-xs text-cv-muted text-right shrink-0">
-                <time>{formatDateRange(exp)}</time>
+                <time>{formatDateRange(exp, locale)}</time>
                 {exp.location && <p>{exp.location}</p>}
               </div>
             </div>
             {exp.stack && exp.stack.length > 0 && (
               <p className="mt-1.5 text-xs font-mono text-cv-muted">
-                Stack: {exp.stack.join(" · ")}
+                {getUiString(locale, "stack")}: {exp.stack.join(" · ")}
               </p>
             )}
             <ul className="mt-2 space-y-1.5 list-disc list-outside ml-4">
