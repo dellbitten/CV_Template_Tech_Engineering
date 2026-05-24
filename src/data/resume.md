@@ -115,8 +115,8 @@ meta: {
 ## Sau khi sửa
 
 1. Lưu file.
-2. `npm run dev` — mở http://localhost:3000 và reload trang.
-3. Deploy: `npm run build` rồi publish (Vercel, v.v.).
+2. Làm mới trình duyệt trên trang xem CV để kiểm tra thay đổi.
+3. Khi deploy production, build và publish lại để cập nhật bản online.
 
 ## Validate
 

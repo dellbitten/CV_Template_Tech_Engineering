@@ -7,7 +7,11 @@ export function SingleColumnATS({ resume }: { resume: Resume }) {
   const mainSections = resume.sectionOrder.filter((id) => id !== "languages");
 
   return (
-    <article className="cv-paper max-w-[210mm] mx-auto" itemScope itemType="https://schema.org/Person">
+    <article
+      className="cv-paper max-w-[210mm] mx-auto leading-relaxed"
+      itemScope
+      itemType="https://schema.org/Person"
+    >
       <CVHeader personal={resume.personal} variant="ats" />
       <meta itemProp="name" content={resume.personal.fullName} />
       <meta itemProp="email" content={resume.personal.contact.email} />

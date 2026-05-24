@@ -23,10 +23,12 @@ export function SectionTitle({
           className,
         )}
       >
-        <span
+      <span
           className={cn(
-            "h-1 w-1 rounded-full shrink-0",
-            variant === "sidebar" ? "bg-electric-500" : "bg-electric-500/70",
+            "h-1.5 w-1.5 rounded-full shrink-0 shadow-[0_0_8px_-2px]",
+            variant === "sidebar"
+              ? "bg-electric-500 shadow-electric-500/50"
+              : "bg-electric-500/80 shadow-electric-500/30",
           )}
         />
         {children}

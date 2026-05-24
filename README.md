@@ -1,15 +1,16 @@
 # Tech Engineering CV Template
 
-Template CV kỹ thuật — **trang chủ chỉ xem CV**, giao diện cố định. Chỉnh nội dung bằng code trong `src/data/`.
+Template CV kỹ thuật — **trang chỉ xem CV**, giao diện tech hiện đại. Chỉnh nội dung trong `src/data/`.
 
-## Chạy
+## Layout theo ngành
 
-```bash
-npm install
-npm run dev
-```
+| Layout | Phù hợp |
+|--------|---------|
+| `two-column-modern` | Software, DevOps, full-stack |
+| `single-column-ats` | Ứng tuyển qua ATS |
+| `compact-senior` | Tech lead / architect |
 
-Mở **http://localhost:3000**
+Cấu hình trong `src/data/config.ts` hoặc `resume.meta.layout`.
 
 ## Chỉnh CV
 
@@ -17,23 +18,23 @@ Mở **http://localhost:3000**
 |------|-----------|
 | [`src/data/resume.ts`](src/data/resume.ts) | [resume.md](src/data/resume.md) |
 | [`src/data/config.ts`](src/data/config.ts) | [config.md](src/data/config.md) |
-| Tổng quan | [src/data/README.md](src/data/README.md) |
+| Tổng quan | [HUONG_DAN_NHAP_LIEU.md](src/data/HUONG_DAN_NHAP_LIEU.md) |
 
-Sửa file → lưu → reload (dev) hoặc `npm run build` (production).
+Sửa file → lưu → làm mới trình duyệt. Deploy production cần build và publish lại.
 
 ## Tính năng trang web
 
 - 3 layout (cấu hình trong `config.ts` / `resume.meta`)
-- Dark / light (nút trên header — chỉ đổi cách xem, không đổi dữ liệu CV)
-- CV phóng **2×** trên trình duyệt (chỉnh `browserDisplayScale` trong `config.ts`)
-- Nút **In CV** (A4) + tải **DOCX**
+- Dark / light (nút header — chỉ đổi cách xem)
+- CV phóng **2×** trên trình duyệt (`browserDisplayScale` trong `config.ts`)
+- **In CV** (A4 scale 1:1) + tải **DOCX**
 
-**Không có** editor, import JSON, GitHub sync hay lưu localStorage trên trình duyệt.
+Không có editor trên web — chỉnh bằng code trong `src/`.
 
 ## Cấu trúc
 
 ```
-src/data/              ← Dữ liệu CV + .md hướng dẫn
+src/data/              ← Dữ liệu CV + hướng dẫn .md
 src/components/cv/     ← UI hiển thị
 src/app/page.tsx       ← Trang xem CV
 ```

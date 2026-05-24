@@ -52,6 +52,7 @@ export function CVRenderer({
         id={id}
         className={cn(
           "cv-paper relative rounded-xl border border-cv/80",
+          "shadow-[0_32px_64px_-24px_rgba(0,0,0,0.35),0_0_0_1px_rgba(255,255,255,0.04)]",
           "shadow-cv-preview p-8 md:p-10",
           "print:shadow-none print:border-0 print:rounded-none print:p-0",
           "before:absolute before:top-0 before:left-0 before:right-0 before:h-[2px]",

@@ -6,7 +6,7 @@ Màu CV và giao diện web lấy từ **[`theme.ts`](./theme.ts)** (`light` / `
 
 1. Mở `src/color/theme.ts`.
 2. Sửa hex trong `light` (giao diện sáng) và/hoặc `dark`.
-3. Lưu → `npm run dev`.
+3. Lưu file và làm mới trình duyệt.
 
 `layout.tsx` inject biến `--cv-*` — không cần sửa từng component.
 
@@ -23,7 +23,7 @@ Màu CV và giao diện web lấy từ **[`theme.ts`](./theme.ts)** (`light` / `
 
 ## Palette Tailwind (`@theme` trong globals.css)
 
-Màu `graphite-*`, `electric-*`, `emerald-*` dùng cho accent trang trí — chỉnh trong `globals.css` nếu cần đổi gradient/ glow.
+Màu `graphite-*`, `electric-*`, `emerald-*` dùng cho accent trang trí — chỉnh trong `globals.css` nếu cần đổi gradient/glow.
 
 ## In PDF
 

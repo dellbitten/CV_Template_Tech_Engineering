@@ -28,7 +28,14 @@ export function ExperienceSection({
       </SectionTitle>
       <div className="space-y-5">
         {experience.map((exp) => (
-          <article key={exp.id} className="print-break-avoid">
+          <article
+            key={exp.id}
+            className="print-break-avoid relative border-l-2 border-electric-500/25 pl-4 ml-0.5"
+          >
+            <span
+              className="absolute -left-[5px] top-2 h-2 w-2 rounded-full bg-electric-500 shadow-[0_0_8px_-2px_rgba(10,132,255,0.6)]"
+              aria-hidden
+            />
             <div className="flex flex-wrap justify-between gap-2 items-baseline">
               <div>
                 <h3 className={cn("font-semibold", compact ? "text-sm" : "text-base")}>
