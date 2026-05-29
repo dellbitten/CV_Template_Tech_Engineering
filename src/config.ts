@@ -5,9 +5,34 @@ import type { LayoutType } from "@/lib/schema/resume";
  *  CẤU HÌNH — src/config.ts
  *  Hướng dẫn: src/huongdan.md
  * ═══════════════════════════════════════════════════════════════
+ *
+ *  BẬT/TẮT GÌ Ở ĐÂU?
+ *  ─────────────────
+ *  • UI trang web (nút, nền, export, QR): `configAdvanced.features` + vài cờ bên dưới.
+ *  • Nội dung CV (Summary, Experience, Projects…): KHÔNG có cờ trong file này.
+ *    → Sửa `resume-basic.ts` / `resume-advanced.ts` (mảng rỗng / xoá dòng).
+ *    → Section không còn dữ liệu tự ẩn khi build (`normalizeResume`).
+ *
+ *  BẢNG `features` — false = ẩn trên web (PDF/DOCX vẫn theo dữ liệu resume)
+ *  ┌────────────────────┬──────────────────────────────────────────────┐
+ *  │ techBackground     │ Nền grid + hiệu ứng công nghệ phía sau CV    │
+ *  │ themeToggle        │ Nút đổi dark / light (header)                │
+ *  │ localeToggle       │ Nút VI / EN (cần translationApi)             │
+ *  │ layoutSwitcher     │ Nút đổi layout CV (header)                   │
+ *  │ showQrCode         │ Khối QR trong header CV (+ qrContactEnabled) │
+ *  │ exportPrint        │ Nút "In CV"                                    │
+ *  │ exportPdf          │ Nút tải PDF                                    │
+ *  │ exportDocx         │ Nút tải DOCX                                   │
+ *  │ translationApi     │ Gọi API dịch + cho phép localeToggle           │
+ *  │ blockGoogle        │ (dự kiến) chặn font/CSP/dịch qua Google       │
+ *  └────────────────────┴──────────────────────────────────────────────┘
+ *
+ *  CÁC SECTION CV — ẩn bằng dữ liệu (không qua config.ts)
+ *  summary | skills | experience | education | languages
+ *  projects | certifications | opensource  → resume-advanced.ts
  */
 
-/** Cấu hình cơ bản — SEO, layout, theme */
+/** Cấu hình cơ bản — SEO, layout mặc định, chặn index */
 export const configBasic = {
   /** Tiêu đề tab trình duyệt */
   title: "Võ Hoàng Hải Nghĩa — CV | ZakShinn",
@@ -36,43 +61,52 @@ export const configBasic = {
   blockSearchIndexing: true,
 } as const;
 
-/** Cấu hình nâng cao — hiển thị web, export, bật/tắt tính năng */
+/**
+ * Cấu hình nâng cao — zoom trình duyệt, tên file export, QR, `features`.
+ * Chỉ ảnh hưởng trang web / meta / export UI; không xoá section trong resume.
+ */
 export const configAdvanced = {
   /** Phóng to CV trên trình duyệt (1 = 100%, 2 = 200%). In ấn luôn 100% */
   browserDisplayScale: 2,
 
-  /** Tiền tố tên file PDF/DOCX */
+  /** Tiền tố tên file khi tải PDF/DOCX (vd. CV_Ten.pdf) */
   exportFilenamePrefix: "CV",
 
-  /** Cho phép QR liên hệ (cần features.showQrCode = true) */
+  /**
+   * Cho phép gắn QR liên hệ vào header CV.
+   * Hiển thị thật cần cả hai: qrContactEnabled = true VÀ features.showQrCode = true.
+   */
   qrContactEnabled: true,
 
   /**
-   * Bật/tắt thành phần trên trang web.
-   * Tắt những mục không cần để giao diện gọn hơn.
+   * Bật/tắt thành phần giao diện trang CV (true = hiện, false = ẩn).
+   * Không điều khiển: Summary, Skills, Experience, Education, Languages,
+   * Projects, Certifications, Open Source — xem resume-basic / resume-advanced.
    */
   features: {
-    /** Nền grid / hiệu ứng công nghệ */
+    /** Bật/tắt nền grid + hiệu ứng công nghệ phía sau CV */
     techBackground: true,
-    /** Nút đổi dark / light */
+    /** Bật/tắt nút đổi giao diện dark / light trên header */
     themeToggle: true,
-    /** Nút VI / EN (dịch qua API) */
+    /** Bật/tắt nút đổi ngôn ngữ VI / EN trên header (cần translationApi) */
     localeToggle: true,
-    /** Đổi layout trên header (không sửa file) */
+    /** Bật/tắt nút đổi layout CV trên header */
     layoutSwitcher: true,
-    /** Mã QR trên CV */
+    /** Bật/tắt khối QR liên hệ trong phần header CV (cần qrContactEnabled) */
     showQrCode: true,
-    /** Nút In CV */
+    /** Bật/tắt nút "In CV" trong nhóm Export */
     exportPrint: true,
-    /** Nút tải PDF */
+    /** Bật/tắt nút tải file PDF */
     exportPdf: true,
-    /** Nút tải DOCX */
+    /** Bật/tắt nút tải file DOCX */
     exportDocx: true,
-    /** API /api/translate — MyMemory only, không dùng Google/Lingva */
+    /** Bật/tắt API dịch `/api/translate` (MyMemory only, không Google/Lingva) */
     translationApi: true,
     /**
-     * Chặn Google: font hệ thống (không fonts.googleapis.com),
-     * CSP chặn domain Google, dịch không qua Google Translate.
+     * Bật/tắt chế độ chặn dịch vụ Google toàn cục:
+     * - font hệ thống (không fonts.googleapis.com)
+     * - CSP chặn domain Google
+     * - dịch không qua Google Translate
      */
     blockGoogle: true,
   },

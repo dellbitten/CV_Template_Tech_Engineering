@@ -67,7 +67,10 @@ Export từ file này: `defaultResume`, `buildResume()`.
 
 ## 4. `avatar.ts` · `color.ts` · `font.ts` · `config.ts`
 
-Xem các file tương ứng — phần `config.ts` → `features` để bật/tắt nút In/PDF/DOCX, dịch EN, đổi layout.
+Xem **`config.ts`** (bảng chú thích đầu file):
+
+- **`features`**: bật/tắt UI (nền, nút theme/layout/ngôn ngữ, export, QR) — **không** ẩn section Summary/Experience/…
+- **Section CV**: để mảng rỗng hoặc xoá nội dung trong `resume-basic.ts` / `resume-advanced.ts` (section rỗng tự ẩn).
 
 **Chặn Google tìm kiếm CV:** trong `config.ts` đặt `blockSearchIndexing: true` (mặc định). Trang gửi `noindex`, `robots.txt` chặn crawl, và header `X-Robots-Tag`. Muốn SEO công khai → đặt `false`.
 
