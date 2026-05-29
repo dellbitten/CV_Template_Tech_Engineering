@@ -143,27 +143,7 @@ export const resumeBasic = {
     },
   ] satisfies Experience[],
 
-  education: [
-    {
-      id: "edu-ctu",
-      university: "Đại học Cần Thơ",
-      degree: "Cử nhân",
-      major: "Công nghệ thông tin",
-      graduationYear: "2024",
-    },
-    {
-      id: "edu-ladec",
-      university: "Trường Cao đẳng Công nghệ Ladec",
-      degree: "Cao đẳng",
-      major: "Công nghệ thông tin",
-      graduationYear: "2019",
-    },
-    {
-      id: "edu-bknamsg",
-      university: "Trường Cao đẳng Bách Khoa Nam Sài Gòn",
-      degree: "Cao đẳng",
-      major: "Y sĩ đa khoa",
-      graduationYear: "2016",
+    education: [
     },
     {
       id: "edu-thpt",
