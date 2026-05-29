@@ -167,21 +167,21 @@ export const resumeBasic = {
     },
     {
       id: "edu-thpt",
-      university: "THPT Nguyễn Thông",
-      degree: "Trung học phổ thông",
-      graduationYear: "2014",
+      university: "Trung Cấp Công nghệ & Du Lịch",
+      degree: "Trường ngành",
+      graduationYear: "2024-2026",
     },
     {
       id: "edu-thcs",
-      university: "THCS Vĩnh Công",
+      university: "THCS Trần Phú ",
       degree: "Trung học cơ sở",
-      graduationYear: "2011",
+      graduationYear: "2020-2024",
     },
     {
       id: "edu-tieu-hoc",
-      university: "Trường Tiểu học Vĩnh Công",
+      university: "Trường Tiểu học Nguyễn Trung Trực",
       degree: "Tiểu học",
-      graduationYear: "2007",
+      graduationYear: "2015-2020",
     },
   ] satisfies Education[],
 
