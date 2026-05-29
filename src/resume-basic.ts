@@ -31,7 +31,7 @@ export const resumeBasic = {
       birthDate: "28/06/2009",
       location: "Việt Nam · Phường Long An Tỉnh Tây Ninh",
       linkedin: "",
-      github: "https://github.com/ZakShinn",
+      github: "https://github.com/dellbitten",
       portfolio: "",
       blog: "",
       stackoverflow: "",
