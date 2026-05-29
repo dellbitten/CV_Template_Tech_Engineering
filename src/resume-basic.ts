@@ -36,8 +36,8 @@ export const resumeBasic = {
       blog: "",
       stackoverflow: "",
       facebook:
-        "https://www.facebook.com/profile.php?id=100006985387032",
-      zalo: "https://zalo.me/0968884946",
+        "https://www.facebook.com/phong.nguyen.436992?mibextid=wwXIfr&rdid=MHVcbj6TaJ29Bv0O&share_url=https%3A%2F%2Fwww.facebook.com%2Fshare%2F1EqFtQWMsf%2F%3Fmibextid%3DwwXIfr",
+      zalo: "https://zalo.me/0843261116",
     },
   },
 
