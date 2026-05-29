@@ -35,7 +35,7 @@ import type { LayoutType } from "@/lib/schema/resume";
 /** Cấu hình cơ bản — SEO, layout mặc định, chặn index */
 export const configBasic = {
   /** Tiêu đề tab trình duyệt */
-  title: "Võ Hoàng Hải Nghĩa — CV | ZakShinn",
+  title: "Nguyễn Thanh Phong — CV | Wind",
 
   /** URL site (SEO, Open Graph) */
   siteUrl: "https://your-cv.vercel.app",
