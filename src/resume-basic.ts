@@ -144,7 +144,6 @@ export const resumeBasic = {
   ] satisfies Experience[],
 
     education: [
-    },
     {
       id: "edu-thpt",
       university: "Trung Cấp Công nghệ & Du Lịch",
