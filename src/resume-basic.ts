@@ -20,16 +20,16 @@ export const BASIC_SECTION_ORDER = [
 
 export const resumeBasic = {
   personal: {
-    fullName: "Võ Hoàng Hải Nghĩa",
-    alias: "NGHĨA ZAKSHIN",
+    fullName: "Nguyễn Thanh Phong",
+    alias: "Wind_9",
     title:
       "Senior System Administrator · DevOps Engineer · Lead Developer",
     avatar: "",
     contact: {
-      email: "nghiasoothsayer@gmail.com",
-      phone: "0968.884.946",
-      birthDate: "06/09/1996",
-      location: "Việt Nam · Ưu tiên Ubuntu Server",
+      email: "thanhphong2k09@gmail.com",
+      phone: "084.326.1116",
+      birthDate: "28/06/2009",
+      location: "Việt Nam · Phường Long An Tỉnh Tây Ninh",
       linkedin: "",
       github: "https://github.com/ZakShinn",
       portfolio: "",
