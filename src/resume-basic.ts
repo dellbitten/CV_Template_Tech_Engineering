@@ -83,8 +83,8 @@ export const resumeBasic = {
 
   experience: [
     {
-      id: "exp-vanan",
-      company: "Bệnh viện Đa khoa Vạn An",
+      id: "",
+      company: "",
       position: "IT Specialist — Chuyên viên Hạ tầng & Hệ thống",
       location: "Việt Nam",
       startDate: "2025-01",
