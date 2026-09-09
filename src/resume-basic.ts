@@ -43,8 +43,6 @@ export const resumeBasic = {
 
   summary:
     "Chuyên gia CNTT (IT Specialist) với nhiều năm kinh nghiệm quản trị hệ thống, hạ tầng mạng doanh nghiệp và phát triển phần mềm. Thế mạnh chuyên sâu tối ưu hạ tầng MikroTik RouterOS v7 (Firewall, Routing, DNS, Layer7), ảo hóa, triển khai VPN bảo mật cao (WireGuard, Tailscale) và tự động hóa (Bash, RouterOS Script). Full-stack Developer với Next.js 15, React 19, PHP; vận hành HIS/EMR tại môi trường y tế. Hướng tới hệ sinh thái ổn định, tự động hóa tối đa và bảo mật cho doanh nghiệp.",
-
-  
     {
       id: "system-network",
       label: "Quản trị hệ thống & Mạng",
