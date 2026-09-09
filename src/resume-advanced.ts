@@ -17,21 +17,21 @@ export const resumeAdvanced = {
 
   skillsExtra: [
     {
-      id: "android-modding",
-      label: "Android Modding & Automation",
+      id: "",
+      label: "",
       skills: [
-        { name: "Magisk", proficiency: "advanced" as const },
-        { name: "KernelSU", proficiency: "advanced" as const },
-        { name: "Telegram control", proficiency: "advanced" as const },
+        { name: "", proficiency: "advanced" as const },
+        { name: "", proficiency: "advanced" as const },
+        { name: "", proficiency: "advanced" as const },
       ],
     },
     {
-      id: "media-iptv",
-      label: "IPTV & Streaming",
+      id: "",
+      label: "",
       skills: [
-        { name: "Multicast", proficiency: "advanced" as const },
-        { name: "M3U / PHP", proficiency: "advanced" as const },
-        { name: "MyTV API", proficiency: "intermediate" as const },
+        { name: "", proficiency: "advanced" as const },
+        { name: "", proficiency: "advanced" as const },
+        { name: "", proficiency: "intermediate" as const },
       ],
     },
     {
@@ -39,81 +39,81 @@ export const resumeAdvanced = {
       label: "Thiết kế đồ họa",
       skills: [
         { name: "Photoshop", proficiency: "advanced" as const },
-        { name: "CorelDRAW", proficiency: "advanced" as const },
-        { name: "Illustrator", proficiency: "intermediate" as const },
-        { name: "Canva", proficiency: "advanced" as const },
+        { name: "", proficiency: "advanced" as const },
+        { name: "", proficiency: "intermediate" as const },
+        { name: "", proficiency: "advanced" as const },
       ],
     },
     {
-      id: "kernel-arm",
-      label: "Nghiên cứu chuyên sâu",
+      id: "",
+      label: "",
       skills: [
-        { name: "Linux Kernel", proficiency: "advanced" as const },
-        { name: "ARM64 / AArch64", proficiency: "intermediate" as const },
+        { name: "", proficiency: "advanced" as const },
+        { name: "", proficiency: "intermediate" as const },
       ],
     },
   ] satisfies SkillCategory[],
 
   projects: [
     {
-      id: "proj-wireguard-admin",
-      name: "Zakshin MikroTik WireGuard Admin",
+      id: "",
+      name: "",
       description:
-        "Tiện ích tự động hóa cấu hình WireGuard trên MikroTik RouterOS",
-      github: "https://github.com/ZakShinn",
-      stack: ["MikroTik", "WireGuard", "RouterOS", "Automation"],
+        "",
+      github: "",
+      stack: ["", "", "", ""],
       architecture:
-        "Đơn giản hóa khởi tạo, quản lý và cấp phát quyền VPN cho người dùng cuối",
+        "",
       achievements: [
-        "Giảm thao tác thủ công khi triển khai VPN nội bộ doanh nghiệp",
-        "Tích hợp quy trình cấp quyền truy cập an toàn",
+        "",
+        "",
       ],
       featured: true,
     },
     {
-      id: "proj-linux-telegram",
-      name: "Linux-Telegram-Monitor",
+      id: "",
+      name: "",
       description:
-        "Giám sát CPU, RAM, Storage, Network trên Linux; cảnh báo Telegram",
-      github: "https://github.com/ZakShinn",
-      stack: ["Linux", "Bash", "Telegram Bot", "Shell Script"],
+        "",
+      github: "",
+      stack: ["", "", "", ""],
       achievements: [
-        "Cảnh báo thời gian thực về tài nguyên máy chủ",
-        "Tự động hóa kịch bản giám sát qua script",
+        "",
+        "",
       ],
       featured: true,
     },
     {
-      id: "proj-mikrotik-backup",
-      name: "Backup & Giám sát MikroTik qua Telegram",
-      description: "Script RouterOS v7 xuất .rsc/.backup, nén và gửi Telegram",
-      stack: ["MikroTik RouterOS v7", "Telegram", "Automation"],
+      id: "",
+      name: "",
+      description: "",
+      stack: [""],
       achievements: [
-        "Sao lưu cấu hình định kỳ, giảm rủi ro mất cấu hình thiết bị",
+        "ị",
       ],
       featured: false,
     },
     {
-      id: "proj-iptv",
-      name: "Giải pháp IPTV & Multicast",
-      description: "Công cụ PHP quét luồng multicast, xuất playlist M3U",
-      stack: ["PHP", "Multicast", "IPTV", "MyTV API"],
+      id: "",
+      name: "",
+      description: "",
+      stack: [""],
       architecture:
-        "Nghiên cứu IPTV; chuyển đổi luồng thu phát thành danh sách phát tùy biến",
+        "",
       achievements: [
-        "Tự động hóa quét và đóng gói luồng multicast",
+        "",
       ],
       featured: false,
     },
     {
-      id: "proj-maias",
-      name: "Web Maias Landing & Telegram Control Builder",
+      id: "",
+      name: "r",
       description:
-        "Landing Next.js 15 / React 19; CI/CD Vercel; điều khiển Android qua Telegram",
-      stack: ["Next.js 15", "React 19", "Vercel", "Android", "Telegram"],
+        "",
+      stack: [""],
       achievements: [
-        "Deploy mượt trên Vercel với pipeline tối ưu",
-        "Module builder điều khiển thiết bị Samsung (đã root) qua Telegram",
+        "",
+        "",
       ],
       featured: true,
     },
@@ -121,37 +121,37 @@ export const resumeAdvanced = {
 
   certifications: [
     {
-      id: "cert-self-linux",
-      name: "Tự nghiên cứu & phát triển",
+      id: "",
+      name: "",
       issuer:
-        "Linux Kernel, tối ưu ARM64 (AArch64), Android system-level modding",
-      date: "Liên tục",
+        "",
+      date: "",
     },
     {
-      id: "cert-it",
-      name: "Chuyên ngành CNTT / Quản trị mạng",
-      issuer: "Đào tạo chính quy & tự học chuyên sâu",
+      id: "",
+      name: "",
+      issuer: "",
     },
   ],
 
   openSource: {
-    githubUsername: "ZakShinn",
+    githubUsername: "dellbitten",
     repositories: [
       {
-        name: "Linux-Telegram-Monitor",
-        description: "Giám sát Linux + cảnh báo Telegram",
-        url: "https://github.com/ZakShinn",
+        name: "",
+        description: "",
+        url: "",
       },
       {
-        name: "Zakshin MikroTik WireGuard Admin",
-        description: "Tự động hóa WireGuard trên MikroTik",
-        url: "https://github.com/ZakShinn",
+        name: "",
+        description: "",
+        url: "",
       },
     ],
     highlights: [
-      "Lead Developer các công cụ tự động hóa MikroTik, Linux và Telegram",
-      "Đóng góp giải pháp VPN, backup và giám sát hạ tầng mã nguồn mở",
-      "Kinh nghiệm IPTV/multicast và phát triển web Next.js hiện đại",
+      "",
+      "",
+      "",
     ],
   },
 };
