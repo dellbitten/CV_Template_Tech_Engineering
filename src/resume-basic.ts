@@ -83,19 +83,7 @@ export const resumeBasic = {
 
   experience: [
     {
-      id: "exp-vanan",
-      company: "Bệnh viện Đa khoa Vạn An",
-      position: "IT Specialist — Chuyên viên Hạ tầng & Hệ thống",
-      location: "Việt Nam",
-      startDate: "2025-01",
-      current: true,
-      stack: [
-        "MikroTik RouterOS v7",
-        "Ubuntu Server",
-        "HIS",
-        "EMR",
-        "Backup",
-        "Firewall",
+     
       ],
       responsibilities: [
         "Thiết kế, vận hành và bảo trì toàn bộ hạ tầng mạng và máy chủ bệnh viện",
