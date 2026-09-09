@@ -83,32 +83,41 @@ export const resumeBasic = {
 
   experience: [
     {
-      id: 
-      company:
-      position: 
-      location: 
-      startDate: 
+      id: "exp-vanan",
+      company: "Bệnh viện Đa khoa Vạn An",
+      position: "IT Specialist — Chuyên viên Hạ tầng & Hệ thống",
+      location: "Việt Nam",
+      startDate: "2025-01",
       current: true,
       stack: [
-       
+        "MikroTik RouterOS v7",
+        "Ubuntu Server",
+        "HIS",
+        "EMR",
+        "Backup",
+        "Firewall",
       ],
       responsibilities: [
-        
+        "Thiết kế, vận hành và bảo trì toàn bộ hạ tầng mạng và máy chủ bệnh viện",
+        "Quản lý hệ thống HIS và quy trình backup dữ liệu EMR định kỳ",
       ],
       achievements: [
-       
+        "Lên phương án và thực thi backup EMR đảm bảo tính toàn vẹn dữ liệu y tế theo quy định",
+        "Tối ưu định tuyến và triển khai chính sách Firewall trên MikroTik bảo vệ dữ liệu bệnh nhân",
+        "Vận hành ổn định hạ tầng CNTT phục vụ hệ thống thông tin bệnh viện",
       ],
     },
     {
-      id: 
-      company: 
-      position: 
-      location: 
-      startDate:
+      id: "exp-lecturer",
+      company: "Trường Cao đẳng Công nghệ và Du lịch",
+      position: "Giảng viên CNTT",
+      location: "Việt Nam",
+      startDate: "2024-01",
       current: true,
-      stack:
+      stack: ["CNTT", "Đào tạo", "Thực hành hệ thống"],
       achievements: [
-        
+        "Giảng dạy kiến thức công nghệ thông tin cho sinh viên cao đẳng từ 2024 đến nay",
+        "Hướng dẫn thực hành, kỹ năng làm việc nhóm và tư duy hệ thống",
       ],
     },
     {
