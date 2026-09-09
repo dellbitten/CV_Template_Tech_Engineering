@@ -107,7 +107,7 @@ export const resumeAdvanced = {
     },
     {
       id: "",
-      name: "r",
+      name: "",
       description:
         "",
       stack: [""],
