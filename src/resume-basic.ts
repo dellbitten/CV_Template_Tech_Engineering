@@ -50,8 +50,8 @@ export const resumeBasic = {
       label: "",
       skills: [
         { name: "", proficiency: "expert" as const },
-        { name: "r", proficiency: "expert" as const },
-        { name: ", proficiency: "expert" as const },
+        { name: "", proficiency: "expert" as const },
+        { name: "", proficiency: "expert" as const },
         { name: "", proficiency: "advanced" as const },
         { name: "", proficiency: "advanced" as const },
         { name: "", proficiency: "advanced" as const },
@@ -61,7 +61,7 @@ export const resumeBasic = {
       id: "development",
       label: "Phát triển & Tự động hóa",
       skills: [
-        { name: "P", proficiency: "expert" as const },
+        { name: "", proficiency: "expert" as const },
         { name: "", proficiency: "expert" as const },
         { name: "", proficiency: "expert" as const },
         { name: "", proficiency: "advanced" as const },
