@@ -21,7 +21,7 @@ export const BASIC_SECTION_ORDER = [
 export const resumeBasic = {
   personal: {
     fullName: "Nguyễn Thanh Phong",
-    alias: "Wind_9",
+    alias: "ThanhPhongg",
     title:
       "Senior System Administrator · DevOps Engineer · Lead Developer",
     avatar: "",
@@ -42,41 +42,41 @@ export const resumeBasic = {
   },
 
   summary:
-    "Chuyên gia CNTT (IT Specialist) với nhiều năm kinh nghiệm quản trị hệ thống, hạ tầng mạng doanh nghiệp và phát triển phần mềm. Thế mạnh chuyên sâu tối ưu hạ tầng MikroTik RouterOS v7 (Firewall, Routing, DNS, Layer7), ảo hóa, triển khai VPN bảo mật cao (WireGuard, Tailscale) và tự động hóa (Bash, RouterOS Script). Full-stack Developer với Next.js 15, React 19, PHP; vận hành HIS/EMR tại môi trường y tế. Hướng tới hệ sinh thái ổn định, tự động hóa tối đa và bảo mật cho doanh nghiệp.",
+    "",
 
   skills: [
     {
       id: "system-network",
-      label: "Quản trị hệ thống & Mạng",
+      label: "",
       skills: [
-        { name: "MikroTik RouterOS v7", proficiency: "expert" as const },
-        { name: "Ubuntu Server", proficiency: "expert" as const },
-        { name: "WireGuard", proficiency: "expert" as const },
-        { name: "Tailscale", proficiency: "advanced" as const },
-        { name: "HIS / EMR", proficiency: "advanced" as const },
-        { name: "Backup & DR", proficiency: "advanced" as const },
+        { name: "", proficiency: "expert" as const },
+        { name: "r", proficiency: "expert" as const },
+        { name: ", proficiency: "expert" as const },
+        { name: "", proficiency: "advanced" as const },
+        { name: "", proficiency: "advanced" as const },
+        { name: "", proficiency: "advanced" as const },
       ],
     },
     {
       id: "development",
       label: "Phát triển & Tự động hóa",
       skills: [
-        { name: "PHP", proficiency: "expert" as const },
-        { name: "Bash / Shell", proficiency: "expert" as const },
-        { name: "RouterOS Script", proficiency: "expert" as const },
-        { name: "Next.js 15", proficiency: "advanced" as const },
-        { name: "React 19", proficiency: "advanced" as const },
-        { name: "Git / GitHub", proficiency: "advanced" as const },
+        { name: "P", proficiency: "expert" as const },
+        { name: "", proficiency: "expert" as const },
+        { name: "", proficiency: "expert" as const },
+        { name: "", proficiency: "advanced" as const },
+        { name: "", proficiency: "advanced" as const },
+        { name: "Git / Github", proficiency: "advanced" as const },
       ],
     },
     {
       id: "devops-tools",
       label: "DevOps & Công cụ",
       skills: [
-        { name: "Cloudflare", proficiency: "advanced" as const },
+        { name: "", proficiency: "advanced" as const },
         { name: "Vercel", proficiency: "advanced" as const },
-        { name: "CI/CD", proficiency: "intermediate" as const },
-        { name: "Telegram Bot", proficiency: "advanced" as const },
+        { name: "", proficiency: "intermediate" as const },
+        { name: "", proficiency: "advanced" as const },
       ],
     },
   ] satisfies SkillCategory[],
